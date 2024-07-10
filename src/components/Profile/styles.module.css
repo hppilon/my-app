@@ -1,0 +1,21 @@
+.container {
+  border: 1px solid cyan;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container > span {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 10px;
+}
+
+.cardImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
