@@ -2,19 +2,19 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 
-export default function Profile() {
+export default function Profile({ nome }) {
   const [pokemon, setPokemon] = useState({});
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon/bulbasaur")
+      .get(`https://pokeapi.co/api/v2/pokemon/${nome}`)
       .then(function (response) {
         setPokemon(response.data);
       })
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  }, [nome]);
 
   useEffect(() => {
     console.log(pokemon);
